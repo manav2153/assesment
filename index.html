@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Transaction Dashboard</h1>
+
+        <!-- Month Selection -->
+        <label for="monthSelect">Select Month:</label>
+        <select id="monthSelect">
+            <option value="0">January</option>
+            <option value="1">February</option>
+            <option value="2">March</option>
+            <option value="3">April</option>
+            <option value="4">May</option>
+            <option value="5">June</option>
+            <option value="6">July</option>
+            <option value="7">August</option>
+            <option value="8">September</option>
+            <option value="9">October</option>
+            <option value="10">November</option>
+            <option value="11">December</option>
+        </select>
+
+        <!-- Search Box -->
+        <input type="text" id="searchBox" placeholder="Search transactions...">
+
+        <!-- Transactions Table -->
+        <table id="transactionsTable">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody id="transactionsBody">
+                <!-- Transactions will be populated here -->
+            </tbody>
+        </table>
+
+        <!-- Pagination Controls -->
+        <div class="pagination">
+            <button id="prevBtn">Previous</button>
+            <button id="nextBtn">Next</button>
+        </div>
+
+        <!-- Transaction Statistics -->
+        <div id="transactionStats">
+            <h2>Transaction Statistics</h2>
+            <p>Total Amount Sold: <span id="totalAmount">0</span></p>
+            <p>Total Sold Items: <span id="totalSoldItems">0</span></p>
+            <p>Total Not Sold Items: <span id="totalNotSoldItems">0</span></p>
+        </div>
+
+        <!-- Transactions Bar Chart -->
+        <div id="barChart">
+            <h2>Price Range Distribution</h2>
+            <canvas id="transactionsChart"></canvas>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="transactionController.js"></script> 
+    <script src="server.js"></script> 
+    <script src="Transaction.js"></script> 
+</body>
+</html>
